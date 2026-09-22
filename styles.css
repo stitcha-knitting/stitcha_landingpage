@@ -262,10 +262,9 @@ a { color: inherit; }
   .feature-path-mobile {
     display: block;
     position: relative;
-    width: 100%;
-    max-width: 340px;
-    margin: 50px auto 0;
-    aspect-ratio: 600 / 1500;
+    width: 100vw;
+    margin: 50px calc(50% - 50vw) 0;
+    aspect-ratio: 390 / 1050;
     background: url("assets/backgrounds/yarn-and-thread-mobile-crop.png") no-repeat center / 100% 100%;
   }
   .path-stop {
