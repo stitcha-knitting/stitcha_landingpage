@@ -154,6 +154,9 @@ a { color: inherit; }
 .hero-visual-mobile { display: none; }
 
 @media (max-width: 640px) {
+  .hero::before {
+    height: clamp(460px, 140vw, 580px);
+  }
   .hero-claim {
     text-align: left;
     margin: 0 0 16px 0;
@@ -163,20 +166,21 @@ a { color: inherit; }
   .hero-visual-desktop { display: none; }
   .hero-visual-mobile {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 4px;
     position: relative;
+    margin-top: 30px;
   }
   .hero-illustration-crop {
-    flex: 1;
-    max-width: 58%;
+    flex: none;
+    width: 62%;
     height: auto;
     object-fit: contain;
   }
   .hero-wordmark {
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: 4.4rem;
+    font-size: 3.2rem;
     letter-spacing: 0.02em;
     color: var(--color-orange);
     writing-mode: vertical-rl;
@@ -262,7 +266,7 @@ a { color: inherit; }
     max-width: 340px;
     margin: 50px auto 0;
     aspect-ratio: 340 / 1000;
-    background: url("assets/backgrounds/thread-line-mobile-crop.png") no-repeat center / 100% 100%;
+    background: url("assets/backgrounds/yarn-and-thread-mobile-crop.png") no-repeat center / 100% 100%;
   }
   .path-stop {
     position: absolute;
@@ -273,6 +277,7 @@ a { color: inherit; }
     text-align: center;
     width: 150px;
   }
+  .path-stop-narrow { width: 118px; }
   .path-pond {
     width: 96px;
     height: 96px;
