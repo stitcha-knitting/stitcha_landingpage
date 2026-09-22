@@ -262,7 +262,7 @@ a { color: inherit; }
     max-width: 340px;
     margin: 50px auto 0;
     aspect-ratio: 340 / 1000;
-    background: url("assets/backgrounds/thread-line-mobile.png") no-repeat center / 100% 100%;
+    background: url("assets/backgrounds/thread-line-mobile-crop.png") no-repeat center / 100% 100%;
   }
   .path-stop {
     position: absolute;
