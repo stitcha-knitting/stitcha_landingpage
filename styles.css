@@ -255,7 +255,7 @@ a { color: inherit; }
 }
 .feature-path-mobile { display: none; }
 
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   .features::before { display: none; }
   .feature-scatter { display: none; }
 
@@ -265,7 +265,7 @@ a { color: inherit; }
     width: 100%;
     max-width: 340px;
     margin: 50px auto 0;
-    aspect-ratio: 340 / 1000;
+    aspect-ratio: 600 / 1500;
     background: url("assets/backgrounds/yarn-and-thread-mobile-crop.png") no-repeat center / 100% 100%;
   }
   .path-stop {
