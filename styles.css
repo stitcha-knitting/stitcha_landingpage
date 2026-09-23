@@ -155,7 +155,11 @@ a { color: inherit; }
 
 @media (max-width: 640px) {
   .hero::before {
-    height: clamp(460px, 140vw, 580px);
+    display: none;
+  }
+  .hero {
+    background: var(--color-blue);
+    padding-bottom: 16px;
   }
   .hero-claim {
     text-align: left;
@@ -165,41 +169,39 @@ a { color: inherit; }
   }
   .hero-visual-desktop { display: none; }
   .hero-visual-mobile {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 0;
+    display: block;
     position: relative;
     width: 100vw;
+    height: 128vw;
     margin: 12px calc(50% - 50vw) 0;
-    padding: 0 0 0 4vw;
   }
   .hero-illustration-crop {
-    flex: none;
-    width: 78%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 90%;
     height: auto;
-    object-fit: contain;
   }
   .hero-wordmark {
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 2vw;
     z-index: 2;
-    flex: none;
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: 4.6rem;
+    font-size: 5.2rem;
     letter-spacing: 0.02em;
     color: var(--color-orange);
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     line-height: 1;
     white-space: nowrap;
-    padding-right: 3vw;
   }
   .hero-s-loop {
     position: absolute;
-    top: 6px;
-    right: -10px;
-    width: 86px;
+    top: 4px;
+    right: -6px;
+    width: 92px;
     z-index: 1;
     pointer-events: none;
   }
