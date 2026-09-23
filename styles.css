@@ -162,48 +162,52 @@ a { color: inherit; }
     padding-bottom: 16px;
   }
   .hero-claim {
+    position: absolute;
+    top: 17vw;
+    left: 24px;
+    right: 40%;
+    z-index: 2;
     text-align: left;
-    margin: 0 0 16px 0;
+    margin: 0;
+    width: auto;
     font-size: 1.05rem;
     max-width: none;
+  }
+  .hero-claim br {
+    display: none;
   }
   .hero-visual-desktop { display: none; }
   .hero-visual-mobile {
     display: block;
     position: relative;
     width: 100vw;
-    height: 128vw;
-    margin: 12px calc(50% - 50vw) 0;
-  }
-  .hero-illustration-crop {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 90%;
-    height: auto;
+    height: 195vw;
+    margin: 0 calc(50% - 50vw) 0;
+    overflow: hidden;
   }
   .hero-wordmark {
     position: absolute;
-    top: 0;
-    right: 2vw;
-    z-index: 2;
+    top: -1vw;
+    right: -1vw;
+    z-index: 1;
     font-family: var(--font-display);
     font-weight: 800;
-    font-size: 5.2rem;
-    letter-spacing: 0.02em;
+    font-size: 51vw;
+    letter-spacing: 0.01em;
     color: var(--color-orange);
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     line-height: 1;
     white-space: nowrap;
   }
-  .hero-s-loop {
+  .hero-illustration-crop {
     position: absolute;
-    top: 4px;
-    right: -6px;
-    width: 92px;
-    z-index: 1;
-    pointer-events: none;
+    left: -14vw;
+    bottom: -2vw;
+    width: 128vw;
+    max-width: none;
+    height: auto;
+    z-index: 3;
   }
 }
 
@@ -273,6 +277,8 @@ a { color: inherit; }
 .feature-path-mobile { display: none; }
 
 @media (max-width: 640px) {
+  .features { padding-top: 8px; }
+  .features h2 { margin-bottom: 6px; }
   .features::before { display: none; }
   .feature-scatter { display: none; }
 
@@ -280,54 +286,60 @@ a { color: inherit; }
     display: block;
     position: relative;
     width: 100vw;
-    margin: 50px calc(50% - 50vw) 0;
-    /* matches the real crop's pixel ratio (860x1100) exactly, so the artwork is never stretched */
+    margin: 20px calc(50% - 50vw) 0;
+    /* matches the real crop's pixel ratio (860x1100) exactly, so the icon positions below stay valid */
     aspect-ratio: 860 / 1100;
-    background: url("assets/backgrounds/yarn-and-thread-mobile-crop.png") no-repeat center / 100% 100%;
+  }
+  .thread-unified {
+    position: absolute;
+    top: 17.67vw;
+    left: 0;
+    width: 100vw;
+    max-width: none;
+    z-index: 0;
+    pointer-events: none;
   }
   .path-stop {
     position: absolute;
     transform: translateX(-50%);
     text-align: center;
-    width: 120px;
+    width: 132px;
   }
-  .path-stop-narrow { width: 96px; }
+  .path-stop-narrow { width: 112px; }
   .path-pond {
     position: absolute;
     left: 50%;
     top: 0;
     transform: translate(-50%, -50%);
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    background: var(--color-lavender-soft);
+    width: 110px;
+    height: 110px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .path-pond img {
-    width: 36px;
-    height: 36px;
+    width: 92px;
+    height: 92px;
     object-fit: contain;
   }
   .path-stop p {
     position: absolute;
     left: 50%;
-    top: 32px;
+    top: 40px;
     transform: translateX(-50%);
     width: 100%;
     color: var(--color-orange);
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 0.75rem;
-    line-height: 1.2;
+    font-size: 0.85rem;
+    line-height: 1.25;
     margin: 0;
   }
 }
 
 /* Audience */
 .audience {
-  background: var(--color-lavender-soft);
+  background: var(--color-white);
   padding: 90px 0 70px;
   position: relative;
   overflow: hidden;
@@ -409,20 +421,40 @@ a { color: inherit; }
 .audience-mobile { display: none; }
 
 @media (max-width: 640px) {
+  .audience {
+    background: transparent;
+    padding-top: 24px;
+    overflow: visible;
+  }
+  .audience h2 {
+    color: var(--color-blue);
+  }
+  .audience::before { display: none; }
   .audience-circles { display: none; }
   .audience-mobile {
     display: block;
     position: relative;
     z-index: 1;
-    margin-top: 40px;
+    margin-top: 30px;
+  }
+  .audience-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+  }
+  .audience-row .yarn-block {
+    flex: 0 0 auto;
+    margin-bottom: 0;
   }
   .yarn-block {
     position: relative;
     text-align: center;
-    margin-bottom: 50px;
   }
-  .yarn-img {
-    width: 200px;
+  .yarn-img-spacer {
+    width: 150px;
+    height: 78px;
     margin: 0 auto;
   }
   .curve-label {
@@ -430,13 +462,13 @@ a { color: inherit; }
     top: -6px;
     left: 50%;
     transform: translateX(-50%);
-    width: 280px;
+    width: 210px;
     pointer-events: none;
   }
   .curve-label text { font-family: "Fira Sans Condensed", var(--font-display); }
   .tilt-list {
     list-style: none;
-    margin: 6px 0 0;
+    margin: 20px 0 0;
     padding: 0;
     display: grid;
     gap: 8px;
@@ -444,9 +476,59 @@ a { color: inherit; }
     font-weight: 700;
     font-size: 0.85rem;
     color: var(--color-text);
+    text-align: center;
   }
+  .tilt-list + .tilt-list { margin-top: 28px; }
+  .audience-row + .tilt-list { margin-top: 380px; }
   .tilt-list li:nth-child(odd) { transform: rotate(-2.5deg); }
   .tilt-list li:nth-child(even) { transform: rotate(2.5deg); }
+
+  .scribble-knitter {
+    width: 130px;
+    height: 104px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+  .scribble-knitter img {
+    position: absolute;
+    top: -26px;
+    left: -56px;
+    width: 262px;
+    max-width: none;
+  }
+  .yarn-block-stricker .curve-label {
+    top: 54px;
+    width: 200px;
+    transform: translateX(-50%) rotate(-14deg);
+  }
+  .yarn-block-designer .curve-label {
+    width: 190px;
+    left: 62%;
+    transform: translateX(-50%) rotate(10deg);
+  }
+  .audience-icon-visualisieren {
+    position: absolute;
+    top: -44px;
+    right: -4px;
+    width: 84px;
+    height: auto;
+    transform: rotate(8deg);
+  }
+  .scribble-sweater {
+    width: 150px;
+    height: 212px;
+    margin: 24px auto 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .scribble-sweater img {
+    position: absolute;
+    top: -350px;
+    left: -75px;
+    width: 352px;
+    max-width: none;
+  }
 }
 
 .audience-tail {
@@ -464,6 +546,26 @@ a { color: inherit; }
   padding: 100px 0 120px;
   text-align: center;
   background: var(--color-white);
+  position: relative;
+  overflow: hidden;
+}
+.coming-soon-thread { display: none; }
+@media (max-width: 640px) {
+  .coming-soon-thread {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -8vw;
+    width: 52vw;
+    max-width: none;
+    height: auto;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .coming-soon .container {
+    position: relative;
+    z-index: 1;
+  }
 }
 .coming-soon h2 {
   color: var(--color-orange);
