@@ -181,6 +181,8 @@ a { color: inherit; }
     object-fit: contain;
   }
   .hero-wordmark {
+    position: relative;
+    z-index: 2;
     flex: none;
     font-family: var(--font-display);
     font-weight: 800;
@@ -192,6 +194,14 @@ a { color: inherit; }
     line-height: 1;
     white-space: nowrap;
     padding-right: 3vw;
+  }
+  .hero-s-loop {
+    position: absolute;
+    top: 6px;
+    right: -10px;
+    width: 86px;
+    z-index: 1;
+    pointer-events: none;
   }
 }
 
