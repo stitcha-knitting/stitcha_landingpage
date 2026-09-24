@@ -13,45 +13,56 @@
 </head>
 <body>
 
-<header class="site-header">
+<header class="site-header on-blue static-header">
   <div class="container header-inner">
     <a href="index.html" class="logo">STITCHA</a>
     <nav class="main-nav" aria-label="Hauptnavigation">
-      <a href="team.html">Team</a>
-      <a href="faq.html" aria-current="page">FAQ</a>
+      <a href="team.html" data-i18n="nav-team">Team</a>
+      <a href="faq.html" aria-current="page" data-i18n="nav-faq">FAQ</a>
+      <a href="imprint.html" data-i18n="nav-imprint">Impressum</a>
     </nav>
-    <a href="https://1622fa1c.sibforms.com/v2/serve/MUIFANT1g4v454QzdCXG605QZQxHj3u4TQtfiyjYBKdYFFoGCnVPABGeTL_RvMcwvkNyiS3Wm88p-9YR1hgTekr2Z44YzQYrPgK_vwaTfbFsT9WNvInNziCYQPvnZXPSPPjf0JK3LC8GifZSynlNeuxiUh5GyzRUT57InJDugp-iI_pjMqwMou1pVEGlvKdmZ4KS9o055Tle7r2vGg==" class="btn btn-outline btn-nav" target="_blank" rel="noopener">Werde Beta-Tester:in</a>
+    <div class="header-actions">
+      <div class="lang-switch" aria-label="Sprache wechseln">
+        <button class="lang-option active" type="button" data-lang="de" aria-pressed="true">DE</button>
+        <button class="lang-option" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="https://1622fa1c.sibforms.com/v2/serve/MUIFANT1g4v454QzdCXG605QZQxHj3u4TQtfiyjYBKdYFFoGCnVPABGeTL_RvMcwvkNyiS3Wm88p-9YR1hgTekr2Z44YzQYrPgK_vwaTfbFsT9WNvInNziCYQPvnZXPSPPjf0JK3LC8GifZSynlNeuxiUh5GyzRUT57InJDugp-iI_pjMqwMou1pVEGlvKdmZ4KS9o055Tle7r2vGg==" class="btn btn-outline-light btn-nav" target="_blank" rel="noopener" data-i18n="nav-beta">Werde Beta-Tester:in</a>
+    </div>
   </div>
 </header>
 
 <main>
   <section class="faq-page">
     <div class="container">
-      <h1>FAQ</h1>
+      <h1 data-i18n="faq-title">FAQ</h1>
       <div class="faq-list">
         <details>
-          <summary>Was kostet Stitcha?</summary>
-          <p>Stitcha befindet sich aktuell in der Beta-Phase. Als Beta-Tester:in kannst du die Plattform kostenlos ausprobieren – wie sich das Preismodell nach dem Launch gestaltet, geben wir rechtzeitig bekannt.</p>
+          <summary data-i18n="faq-q-1">Was kostet Stitcha?</summary>
+          <p data-i18n="faq-a-1">Stitcha bleibt für Stricker:innen kostenlos. Für Designer:innen können künftig kostenpflichtige Funktionen hinzukommen – die Nutzung als Stricker:in bleibt jedoch kostenlos.</p>
         </details>
         <details>
-          <summary>Wann startet die Beta?</summary>
-          <p>Wir arbeiten aktuell mit Hochdruck an Stitcha. Trag dich als Beta-Tester:in ein, dann informieren wir dich als Erstes, sobald es losgeht.</p>
+          <summary data-i18n="faq-q-2">Wann startet die Beta?</summary>
+          <p data-i18n="faq-a-2">Wir arbeiten aktuell an Stitcha und planen den Start unserer ersten Beta Anfang 2027. Melde dich auf der Warteliste an, um zu den Ersten zu gehören.</p>
         </details>
         <details>
-          <summary>Wer kann alles Beta-Tester:in werden?</summary>
-          <p>Sowohl Strickende als auch Muster-Designer:innen sind herzlich willkommen – egal ob Anfänger:in oder erfahrene Profi.</p>
+          <summary data-i18n="faq-q-3">Wer kann Beta-Tester:in werden?</summary>
+          <p data-i18n="faq-a-3">Alle! Egal, ob du gerade erst mit dem Stricken beginnst, schon viele Jahre strickst oder eigene Anleitungen entwirfst – wir freuen uns über jedes Feedback.</p>
         </details>
         <details>
-          <summary>Funktioniert das mit jedem Garn?</summary>
-          <p>Ja. Stitcha rechnet Anleitungen auf Basis von Maschenproben um, sodass du dein Wunschgarn verwenden kannst, unabhängig davon, welches Garn in der Originalanleitung angegeben ist.</p>
+          <summary data-i18n="faq-q-4">Brauche ich Strickerfahrung oder Vorkenntnisse?</summary>
+          <p data-i18n="faq-a-4">Nein. Stitcha unterstützt sowohl Einsteiger:innen als auch erfahrene Stricker:innen – vom ersten Schal bis zum selbst entworfenen Pullover.</p>
         </details>
         <details>
-          <summary>Brauche ich Vorkenntnisse?</summary>
-          <p>Nein. Stitcha ist so gestaltet, dass sowohl Einsteiger:innen als auch erfahrene Stricker:innen direkt loslegen können.</p>
+          <summary data-i18n="faq-q-5">Funktioniert Stitcha mit allen Garnen?</summary>
+          <p data-i18n="faq-a-5">Ja! Stitcha ist unabhängig von bestimmten Garnmarken und soll dir die Freiheit geben, mit deinem Lieblingsgarn zu stricken.</p>
         </details>
         <details>
-          <summary>Kann ich bestehende Patterns nutzen?</summary>
-          <p>Ja, du kannst eigene oder bestehende Anleitungen einbinden und mit Stitcha verwalten, anpassen und umrechnen.</p>
+          <summary data-i18n="faq-q-6">Kann ich bestehende Anleitungen importieren?</summary>
+          <p data-i18n="faq-a-6">Wir arbeiten daran. Der Import bestehender PDF-Anleitungen ist für einen späteren Zeitpunkt geplant, da wir sicherstellen möchten, dass alle Inhalte zuverlässig und korrekt in das Stitcha-Format übertragen werden.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq-q-7">Kann ich meine eigenen Anleitungen veröffentlichen?</summary>
+          <p data-i18n="faq-a-7">Ja! Stitcha wird Designer:innen die Möglichkeit bieten, eigene interaktive Anleitungen zu veröffentlichen, zu verwalten und zu verkaufen.</p>
         </details>
       </div>
     </div>
@@ -60,9 +71,10 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <a href="team.html">Team</a>
-    <span class="footer-handle">@stitcha.app</span>
-    <a href="faq.html">FAQ</a>
+    <a href="team.html" data-i18n="nav-team">Team</a>
+    <a href="https://www.instagram.com/stitcha.app/" class="footer-handle" target="_blank" rel="noopener">@stitcha.app</a>
+    <a href="faq.html" data-i18n="nav-faq">FAQ</a>
+    <a href="imprint.html" data-i18n="nav-imprint">Impressum</a>
   </div>
 </footer>
 
