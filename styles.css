@@ -396,8 +396,8 @@ a { color: inherit; }
   .pos-2 { left: 60%; top: 23%; }
   .pos-3 { left: 40%; top: 56%; }
   .pos-4 { left: 16%; top: 72%; }
-  .pos-5 { left: 90%; top: 15%; }
-  .pos-6 { left: 84%; top: 38%; }
+  .pos-5 { left: 76%; top: 33%; }
+  .pos-6 { left: 83%; top: 70%; }
 }
 
 @media (max-width: 900px) {
