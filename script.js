@@ -150,6 +150,14 @@ function setLanguage(lang) {
   }
 }
 
+// Feature-Icons: beim Hovern zur animierten GIF-Version wechseln
+document.querySelectorAll('img[data-hover]').forEach((img) => {
+  const staticSrc = img.dataset.static;
+  const hoverSrc = img.dataset.hover;
+  img.addEventListener('mouseenter', () => { img.src = hoverSrc; });
+  img.addEventListener('mouseleave', () => { img.src = staticSrc; });
+});
+
 // Language switch
 document.querySelectorAll('.lang-option').forEach((button) => {
   button.addEventListener('click', () => setLanguage(button.dataset.lang));
