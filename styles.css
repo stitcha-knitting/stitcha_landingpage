@@ -396,8 +396,8 @@ a { color: inherit; }
   .pos-2 { left: 60%; top: 23%; }
   .pos-3 { left: 40%; top: 56%; }
   .pos-4 { left: 16%; top: 72%; }
-  .pos-5 { left: 76%; top: 33%; }
-  .pos-6 { left: 83%; top: 70%; }
+  .pos-5 { left: 88%; top: 33%; }
+  .pos-6 { left: 74%; top: 70%; }
 }
 
 @media (max-width: 900px) {
@@ -638,7 +638,7 @@ a { color: inherit; }
 @media (max-width: 900px) {
   .audience {
     background: transparent;
-    padding-top: 24px;
+    padding-top: 4px;
     padding-bottom: 60px;
     overflow: visible;
   }
@@ -664,18 +664,18 @@ a { color: inherit; }
     text-align: left;
     margin-left: 0;
     position: relative;
-    top: 8px;
+    top: 0;
   }
   .audience-circles { display: none; }
   .audience-mobile {
     display: block;
     position: relative;
     z-index: 1;
-    margin-top: 12px;
+    margin-top: 4px;
     max-width: 380px;
     margin-left: auto;
     margin-right: auto;
-    top: 8px;
+    top: 0;
   }
   .audience-row {
     display: flex;
