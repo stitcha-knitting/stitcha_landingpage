@@ -8,6 +8,14 @@ const translations = {
     'back-home': '← Startseite',
     'team-title': 'Team',
     'team-intro': 'Wir sind ein kleines Team aus Strickerinnen, Entwicklern und Designerinnen, das Stitcha mit Herzblut aufbaut. Lernt uns hier ein bisschen kennen.',
+    'team-role-annika': 'Stricktechnologie,<br>wissenschaftlich-technische Entwicklung',
+    'team-role-linn': 'Projektleitung, Produktstrategie,<br>User Experience',
+    'team-role-gwyneth': 'Softwareentwicklung,<br>Systemarchitektur',
+    'team-role-christian': 'Operations, Unternehmensorganisation<br>&amp; Community',
+    'index-doctitle': 'Stitcha – Die Plattform rund ums Stricken',
+    'team-doctitle': 'Team – Stitcha',
+    'faq-doctitle': 'FAQ – Stitcha',
+    'imprint-doctitle': 'Impressum – Stitcha',
     'features-title': 'Mit Stitcha kannst du',
     'feature-adapt': 'Strickanleitungen<br>an dich anpassen',
     'feature-community': 'dich mit der Community<br>austauschen und treffen',
@@ -69,6 +77,14 @@ const translations = {
     'back-home': '← Home',
     'team-title': 'Team',
     'team-intro': 'We are a small team of knitters, developers, and designers building Stitcha with heart. Get to know us a little here.',
+    'team-role-annika': 'Knitting technology,<br>scientific-technical development',
+    'team-role-linn': 'Project management, product strategy,<br>user experience',
+    'team-role-gwyneth': 'Software development,<br>system architecture',
+    'team-role-christian': 'Operations, business organization<br>&amp; community',
+    'index-doctitle': 'Stitcha – The platform for everything knitting',
+    'team-doctitle': 'Team – Stitcha',
+    'faq-doctitle': 'FAQ – Stitcha',
+    'imprint-doctitle': 'Imprint – Stitcha',
     'features-title': 'What you can do with Stitcha',
     'feature-adapt': 'Customize<br>knitting patterns',
     'feature-community': 'Connect with the<br>knitting community',
@@ -127,6 +143,11 @@ const translations = {
 function setLanguage(lang) {
   const selected = translations[lang] || translations.de;
   document.documentElement.lang = lang;
+
+  const titleKey = document.body.dataset.titleKey;
+  if (titleKey && selected[titleKey]) {
+    document.title = selected[titleKey];
+  }
 
   document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.dataset.i18n;
