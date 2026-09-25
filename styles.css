@@ -934,7 +934,7 @@ a { color: inherit; }
 .team-photo {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 16px;
+  border-radius: 0;
   object-fit: cover;
   object-position: center;
   background: var(--color-lavender);
@@ -942,10 +942,10 @@ a { color: inherit; }
   margin-bottom: 16px;
   display: block;
 }
-.team-photo--annika { object-position: center 18%; transform: rotate(-1.5deg); }
-.team-photo--gwyneth { object-position: center 18%; transform: rotate(1deg); }
-.team-photo--derman { object-position: center 28%; transform: rotate(-1deg); }
-.team-photo--linn { object-position: center 20%; transform: rotate(1.5deg); }
+.team-photo--annika { object-position: center 18%; }
+.team-photo--gwyneth { object-position: center 18%; }
+.team-photo--derman { object-position: center 28%; }
+.team-photo--linn { object-position: center 20%; }
 .team-photo.placeholder {
   display: flex;
   align-items: center;
