@@ -275,6 +275,7 @@ a { color: inherit; }
 .hero-visual-mobile { display: none; }
 .hero-beta-btn { display: none; }
 .hero-figma { display: none; }
+.figma-screens { display: none; }
 
 @media (min-width: 901px) {
   .hero {
@@ -294,6 +295,42 @@ a { color: inherit; }
   :root[lang="en"] .hero-figma.lang-de-only,
   :root:not([lang="en"]) .hero-figma.lang-en-only { display: none; }
   .site-header.on-blue:not(.static-header) { background: transparent; }
+  .hero { position: relative; z-index: 1; }
+
+  .figma-screens {
+    display: block;
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-top: -76.944vw;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .figma-screens-img { display: block; width: 100%; height: auto; }
+  :root[lang="en"] .figma-screens-img.lang-de-only,
+  :root:not([lang="en"]) .figma-screens-img.lang-en-only { display: none; }
+  .figma-gif {
+    position: absolute;
+    height: auto;
+    max-width: none;
+    pointer-events: none;
+  }
+  .figma-gif-mirror { transform: scaleX(-1); }
+  .figma-beta-link {
+    position: absolute;
+    left: 38%;
+    width: 24%;
+    top: 89.2%;
+    height: 1.6%;
+    color: transparent;
+    font-size: 0;
+    z-index: 2;
+  }
+
+  .desktop-thread-wrap .features,
+  .desktop-thread-wrap .audience,
+  .desktop-thread-wrap .coming-soon,
+  .site-thread-full { display: none !important; }
 }
 
 @media (max-width: 900px) {
