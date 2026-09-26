@@ -305,6 +305,10 @@ a { color: inherit; }
   .hero-figma-tagline .hero-figma { margin: 0; }
   /* Graphic-only export (715 units), pulled up so STITCHA sits higher */
   .hero-figma-graphic { margin-top: 0; }
+  /* Blue stops 87 units above the graphic's bottom (as in the design) so the thread pokes out */
+  .hero {
+    background: linear-gradient(#2548AE, #2548AE) top / 100% calc(100% - 6.049vw) no-repeat;
+  }
   .site-header.on-blue:not(.static-header) { background: transparent; }
   .hero { position: relative; z-index: 1; }
 
@@ -313,8 +317,8 @@ a { color: inherit; }
     position: relative;
     width: 100vw;
     margin-left: calc(50% - 50vw);
-    /* screens y=1108 units lands 60 units below the hero */
-    margin-top: calc(-76.944vw + 4.167vw);
+    /* screens y=1108 units lands 30 units below the hero */
+    margin-top: calc(-76.944vw + 2.083vw);
     overflow: hidden;
     z-index: 0;
   }
