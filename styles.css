@@ -1155,3 +1155,86 @@ a { color: inherit; }
 }
 .faq-list details[open] summary::after { transform: rotate(180deg); }
 .faq-list p { margin: 14px 0 0; color: var(--color-text-muted); }
+
+/* Mobile home rebuilt from designer exports (550px-wide artboard -> 100vw; 1 unit = 0.181818vw) */
+.figma-mobile { display: none; }
+
+@media (max-width: 900px) {
+  .figma-mobile {
+    display: block;
+    position: relative;
+    width: 100vw;
+    height: 730vw;
+    overflow: hidden;
+  }
+  .hero,
+  .desktop-thread-wrap .features,
+  .desktop-thread-wrap .audience,
+  .desktop-thread-wrap .coming-soon,
+  .audience-thread-fill { display: none !important; }
+
+  :root[lang="en"] .figma-mobile .lang-de-only,
+  :root:not([lang="en"]) .figma-mobile .lang-en-only { display: none; }
+
+  .fm-bg { position: absolute; left: 0; width: 100%; height: 185.62vw; }
+  .fm-bg-hero { top: 0; background: #2548AE; }
+  .fm-bg-audience { top: 373.67vw; background: #F3F6FF; }
+  .fm-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-width: none;
+  }
+  .fm-hero-de, .fm-hero-en {
+    position: absolute;
+    height: auto;
+    max-width: none;
+  }
+  .fm-hero-de { left: 10.221vw; top: 3.154vw; width: 82.18vw; }
+  .fm-hero-en { left: 0; top: 0; width: 100vw; }
+  .fm-gif {
+    position: absolute;
+    height: auto;
+    max-width: none;
+    pointer-events: none;
+  }
+  .fm-mirror { transform: scaleX(-1); }
+  .fm-designer {
+    position: absolute;
+    left: 99.19vw;
+    top: 377.255vw;
+    width: 0;
+    height: 0;
+    transform-origin: 0 0;
+    transform: matrix(-0.971621, -0.236542, -0.236542, 0.971621, 0, 0);
+    pointer-events: none;
+  }
+  .fm-designer img {
+    position: absolute;
+    left: -5.462vw;
+    top: -8.182vw;
+    width: 45.51vw;
+    max-width: none;
+    height: auto;
+  }
+  .fm-hero-btn {
+    position: absolute;
+    left: 12.7vw;
+    top: 87vw;
+    font-size: 0.85rem;
+    padding: 0.6em 1.1em;
+    z-index: 2;
+  }
+  .fm-beta-link {
+    position: absolute;
+    left: 25vw;
+    width: 50vw;
+    top: 632.7vw;
+    height: 8vw;
+    font-size: 0;
+    color: transparent;
+    z-index: 2;
+  }
+}
