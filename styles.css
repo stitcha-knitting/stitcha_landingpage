@@ -274,6 +274,27 @@ a { color: inherit; }
 
 .hero-visual-mobile { display: none; }
 .hero-beta-btn { display: none; }
+.hero-figma { display: none; }
+
+@media (min-width: 901px) {
+  .hero {
+    padding: 0;
+    background: transparent;
+  }
+  .hero .hero-claim,
+  .hero .hero-illustration { display: none; }
+  .hero-figma {
+    display: block;
+    width: 100vw;
+    max-width: 100vw;
+    height: auto;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+  :root[lang="en"] .hero-figma.lang-de-only,
+  :root:not([lang="en"]) .hero-figma.lang-en-only { display: none; }
+  .site-header.on-blue:not(.static-header) { background: transparent; }
+}
 
 @media (max-width: 900px) {
   .hero::before {
