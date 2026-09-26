@@ -1308,3 +1308,6 @@ a { color: inherit; }
 .fx-balloon .fx-mask {
   filter: brightness(0) invert(1) drop-shadow(0 0 1px #fff) drop-shadow(0 0 2px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 4px #fff) drop-shadow(0 0 4px #fff) drop-shadow(0 0 4px #fff) drop-shadow(0 0 4px #fff) drop-shadow(0 0 4px #fff);
 }
+/* Keep the balloon's white mask above the caption so "Überblick" is not washed out */
+@media (min-width: 901px) { .figma-screens .fx-balloon .fx-clip { clip-path: inset(0 0 7% 0); } }
+@media (max-width: 900px) { .figma-mobile .fx-balloon .fx-clip { clip-path: polygon(0 0, 100% 0, 100% 86%, 56% 86%, 56% 100%, 0 100%); } }

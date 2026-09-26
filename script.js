@@ -143,6 +143,7 @@ const translations = {
 function setLanguage(lang) {
   const selected = translations[lang] || translations.de;
   document.documentElement.lang = lang;
+  try { localStorage.setItem('lang', lang); } catch (e) {}
 
   const titleKey = document.body.dataset.titleKey;
   if (titleKey && selected[titleKey]) {
@@ -188,4 +189,7 @@ document.querySelectorAll('img').forEach((img) => {
   img.addEventListener('dragstart', (e) => e.preventDefault());
 });
 
-setLanguage('de');
+// Keep the chosen language when moving between pages
+let savedLang = 'de';
+try { savedLang = localStorage.getItem('lang') || 'de'; } catch (e) {}
+setLanguage(savedLang);
