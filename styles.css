@@ -1291,3 +1291,12 @@ a { color: inherit; }
 .site-header.plain-header,
 .site-header.plain-header .header-inner { background: var(--color-white); }
 .footer-inner a[aria-current="page"] { color: var(--color-orange); }
+
+/* Home desktop header: only the beta button (left) and the language toggle (right) */
+@media (min-width: 901px) {
+  .site-header.on-blue:not(.static-header) .header-actions {
+    flex: 1;
+    justify-content: space-between;
+  }
+  .site-header.on-blue:not(.static-header) .btn-nav-home { order: -1; }
+}
