@@ -1238,3 +1238,33 @@ a { color: inherit; }
     z-index: 2;
   }
 }
+
+/* Animated GIFs laid over the static icons baked into the exports (white patch hides the static drawing) */
+.fx { position: absolute; transform-origin: 0 0; pointer-events: none; }
+.fx-clip { position: absolute; inset: 0; overflow: hidden; }
+.fx-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  filter: brightness(0) invert(1)
+    drop-shadow(0 0 0.6px #fff) drop-shadow(0 0 0.6px #fff)
+    drop-shadow(0 0 1.2px #fff) drop-shadow(0 0 1.2px #fff)
+    drop-shadow(0 0 1.2px #fff);
+}
+.fx-gif { position: absolute; height: auto; max-width: none; }
+
+@media (min-width: 901px) {
+  .figma-screens .fx-balloon   { left: 49.664vw; top: 97.984vw;  width: 16.091vw; height: 15.960vw; transform: scaleX(-1); }
+  .figma-screens .fx-visualize { left: 10.786vw; top: 115.881vw; width: 17.202vw; height: 13.679vw; transform: rotate(-6.46231deg); }
+  .figma-screens .fx-lookup    { left: 68.609vw; top: 108.889vw; width: 24.444vw; height: 20.556vw; transform: rotate(2.75576deg); }
+  .figma-screens .fx-community { left: 56.121vw; top: 82.688vw;  width: 9.362vw;  height: 13.242vw; }
+}
+@media (max-width: 900px) {
+  .figma-mobile .fx-balloon   { left: 60.627vw; top: 260.451vw; width: 28.908vw; height: 28.674vw; transform: scaleX(-1); }
+  .figma-mobile .fx-visualize { left: 64.575vw; top: 294.558vw; width: 27.960vw; height: 22.235vw; transform: rotate(-6.46231deg); }
+  .figma-mobile .fx-lookup    { left: 64.746vw; top: 229.833vw; width: 30.930vw; height: 26.009vw; transform: rotate(2.75576deg); }
+  .figma-mobile .fx-community { left: 13.177vw; top: 286.422vw; width: 16.862vw; height: 23.852vw; }
+}
