@@ -1286,3 +1286,8 @@ a { color: inherit; }
   .figma-mobile .fx-lookup    { left: 64.746vw; top: 229.833vw; width: 30.930vw; height: 26.009vw; transform: rotate(2.75576deg); }
   .figma-mobile .fx-community { left: 13.177vw; top: 286.422vw; width: 16.862vw; height: 23.852vw; }
 }
+
+/* Subpages: plain white header with orange logo and only the language toggle */
+.site-header.plain-header,
+.site-header.plain-header .header-inner { background: var(--color-white); }
+.footer-inner a[aria-current="page"] { color: var(--color-orange); }
