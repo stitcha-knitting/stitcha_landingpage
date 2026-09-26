@@ -304,7 +304,7 @@ a { color: inherit; }
   }
   .hero-figma-tagline .hero-figma { margin: 0; }
   /* Graphic-only export (715 units), pulled up so STITCHA sits higher */
-  .hero-figma-graphic { margin-top: -6.25vw; }
+  .hero-figma-graphic { margin-top: -2.778vw; }
   .site-header.on-blue:not(.static-header) { background: transparent; }
   .hero { position: relative; z-index: 1; }
 
