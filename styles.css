@@ -1300,3 +1300,11 @@ a { color: inherit; }
   }
   .site-header.on-blue:not(.static-header) .btn-nav-home { order: -1; }
 }
+.site-header.plain-header .logo { color: var(--color-blue); }
+@media (min-width: 901px) {
+  .site-header.on-blue:not(.static-header) .header-actions { align-items: flex-start; }
+}
+/* Balloon: wider white silhouette so no faint static lines show through the GIF */
+.fx-balloon .fx-mask {
+  filter: brightness(0) invert(1) drop-shadow(0 0 1px #fff) drop-shadow(0 0 2px #fff) drop-shadow(0 0 3px #fff) drop-shadow(0 0 4px #fff) drop-shadow(0 0 4px #fff) drop-shadow(0 0 4px #fff) drop-shadow(0 0 4px #fff) drop-shadow(0 0 4px #fff);
+}
