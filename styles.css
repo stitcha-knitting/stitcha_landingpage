@@ -294,6 +294,16 @@ a { color: inherit; }
   }
   :root[lang="en"] .hero-figma.lang-de-only,
   :root:not([lang="en"]) .hero-figma.lang-en-only { display: none; }
+  /* Tagline window: top 230 of 1108 units of the full hero (only the slogan on blue) */
+  .hero-figma-tagline {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    height: 15.972vw;
+    overflow: hidden;
+  }
+  .hero-figma-tagline .hero-figma { margin: 0; }
+  /* Graphic-only export (715 units), pulled up so STITCHA sits higher */
+  .hero-figma-graphic { margin-top: -6.25vw; }
   .site-header.on-blue:not(.static-header) { background: transparent; }
   .hero { position: relative; z-index: 1; }
 
@@ -302,7 +312,8 @@ a { color: inherit; }
     position: relative;
     width: 100vw;
     margin-left: calc(50% - 50vw);
-    margin-top: -76.944vw;
+    /* screens y=1108 units lands 60 units below the hero */
+    margin-top: calc(-76.944vw + 4.167vw);
     overflow: hidden;
     z-index: 0;
   }
