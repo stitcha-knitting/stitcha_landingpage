@@ -279,8 +279,8 @@ a { color: inherit; }
 
 @media (min-width: 901px) {
   .hero {
-    padding: 0;
-    background: transparent;
+    padding: max(0px, calc(100px - 5.9vw)) 0 0;
+    background: #2548AE;
   }
   .hero .hero-claim,
   .hero .hero-illustration { display: none; }
