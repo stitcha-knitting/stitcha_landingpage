@@ -322,7 +322,9 @@ a { color: inherit; }
     overflow: hidden;
     z-index: 0;
   }
-  .figma-screens-img { display: block; width: 100%; height: auto; }
+  .figma-screens-img { position: relative; display: block; width: 100%; height: auto; }
+  /* Light-blue band behind the "Für alle" screen (screen 3 of the 1020.89-unit grid) */
+  .figma-bg-audience { position: absolute; left: 0; width: 100%; top: 141.79vw; height: 70.895vw; background: #F3F6FF; }
   :root[lang="en"] .figma-screens-img.lang-de-only,
   :root:not([lang="en"]) .figma-screens-img.lang-en-only { display: none; }
   .figma-gif {
