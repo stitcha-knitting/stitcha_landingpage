@@ -1058,7 +1058,7 @@ a { color: inherit; }
   display: block;
 }
 .team-photo--annika { object-position: center 18%; }
-.team-photo--gwyneth { object-position: center 18%; }
+.team-photo--gwyneth { object-position: center; }
 .team-photo--derman { object-position: center 28%; }
 .team-photo--linn { object-position: center 20%; }
 .team-photo.placeholder {
