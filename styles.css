@@ -1314,3 +1314,31 @@ a { color: inherit; }
 /* Keep the balloon's white mask above the caption so "Überblick" is not washed out */
 @media (min-width: 901px) { .figma-screens .fx-balloon .fx-clip { clip-path: inset(0 0 7% 0); } }
 @media (max-width: 900px) { .figma-mobile .fx-balloon .fx-clip { clip-path: polygon(0 0, 100% 0, 100% 86%, 56% 86%, 56% 100%, 0 100%); } }
+
+/* Privacy policy page: same card as the imprint, plus the overview table */
+.privacy-card h2 { margin-top: 1.8em; }
+.privacy-card a { color: var(--color-blue); overflow-wrap: anywhere; }
+.privacy-card ul { margin: 0 0 1em; }
+.privacy-card strong { color: var(--color-text); }
+.privacy-table-wrap { overflow-x: auto; }
+.privacy-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-white);
+  border: 1px solid var(--color-lavender);
+  font-size: 0.95rem;
+}
+.privacy-table th,
+.privacy-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 12px 14px;
+  border: 1px solid var(--color-lavender);
+  color: var(--color-text-muted);
+}
+.privacy-table th { color: var(--color-text); font-weight: 600; }
+@media (max-width: 900px) {
+  .privacy-table { font-size: 0.82rem; }
+  .privacy-table th,
+  .privacy-table td { padding: 8px; hyphens: auto; }
+}
