@@ -1348,3 +1348,5 @@ a { color: inherit; }
 .footer-imprint,
 .footer-privacy { line-height: 1.3; }
 .footer-privacy { margin-top: -4px; }
+:root[lang="en"] .privacy-de,
+:root:not([lang="en"]) .privacy-en { display: none; }
