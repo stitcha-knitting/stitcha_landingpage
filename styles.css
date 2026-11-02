@@ -997,7 +997,8 @@ a { color: inherit; }
 .footer-team { justify-self: start; }
 .footer-handle { justify-self: center; }
 .footer-faq { justify-self: end; }
-.footer-imprint {
+.footer-imprint,
+.footer-privacy {
   grid-column: 2;
   justify-self: center;
   font-family: var(--font-body, inherit);
