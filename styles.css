@@ -1342,3 +1342,9 @@ a { color: inherit; }
   .privacy-table th,
   .privacy-table td { padding: 8px; hyphens: auto; }
 }
+
+/* Footer: tighter Impressum/Datenschutz pair and less space below */
+.site-footer { padding-bottom: 14px; }
+.footer-imprint,
+.footer-privacy { line-height: 1.3; }
+.footer-privacy { margin-top: -4px; }
