@@ -75,7 +75,7 @@ const translations = {
     'nav-team': 'Team',
     'nav-faq': 'FAQ',
     'nav-imprint': 'Imprint',
-    'nav-privacy': 'Privacy',
+    'nav-privacy': 'Privacy Policy',
     'nav-beta': 'Join the waitlist',
     'hero-claim': 'Everything knitting. <br>All in one place.',
     'back-home': '← Home',
